@@ -1,0 +1,51 @@
+td{
+	width:55px;
+	height:55px;
+    border: 1px solid black
+}
+#ladder1{
+	position: absolute;
+	z-index:-1;
+	top:85px; ;
+}
+#snake1
+{
+	position: absolute;
+	z-index:1;
+	top:55px;
+	left:300px;
+}
+#snake2
+{
+	position: absolute;
+	z-index:1;
+	top:18px;
+	left:100px;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    
+    top: 200px;
+    left: 400px;
+    right: 400px;
+    font-size: 100px;
+    
+    z-index: 2;
+   
+}
+
+#ladder3
+{
+	position: absolute;;
+	z-index:-1;
+	top:150px;
+	left:280px;
+}
+#snake3
+{
+	position: absolute;
+	z-index:-1;
+	top:350px;
+	left:220px;
+}
