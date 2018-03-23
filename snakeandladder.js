@@ -13,7 +13,7 @@ $(document).ready(function(){
 				var z=id1;
 			  id1=id1+x;
 			  player=2;
-			  if(x==6){
+			  if(x==6&&id1<100){
 				player=1;
 			   }
 
@@ -37,7 +37,7 @@ $(document).ready(function(){
 				var z=id2;
 				id2=id2+y;
 				player=1;
-				 if(y==6){
+				 if(y==6&&id2<100){
 					player=2;
 				 }
 				id2=check(id2);
