@@ -2,10 +2,11 @@
 		var id1=0;
 		var id2=0;
 		var player=1;
-
+var x;
 $(document).ready(function(){
 	$("button").click(function(){
-		var	x=((Math.floor(Math.random() * 6) + 1));
+			x=((Math.floor(Math.random() * 6) + 1));
+		
 		
 			if(player==1){
 			  document.getElementById("turn").innerHTML="player1";
@@ -41,8 +42,10 @@ $(document).ready(function(){
 					player=2;
 				 }
 				id2=check(id2);
+				if(id2<100){
 				document.getElementById(id2).style.backgroundColor="green";
 				document.getElementById(z).style.backgroundColor="transparent";
+			     }
 				 if(id2>100){
 			    id2=id2-y;	
 			   	document.getElementById(id2).style.backgroundColor="green";
@@ -52,8 +55,16 @@ $(document).ready(function(){
 });
 function check(id)
 { var id;
-	if(id==100){
+	if(id==100&&id==id1){
+		document.getElementById("overlay").innerHTML="PLAYER 1 WINS"
   	on();
+  }
+  else
+  	if(id==100)
+  {
+  	document.getElementById("overlay").innerHTML="PLAYER 2 WINS"
+  	on();
+
   }
   if(id==19){
   	id=76;
@@ -62,7 +73,7 @@ function check(id)
   }
   else
   	if(id==86){
-  		id=47;
+  	  id=47;
   		alert("oops sorry");
   		return id;
   	}
@@ -72,24 +83,22 @@ function check(id)
   			alert("oops sorry");
   			return id;
   		}
-  else
-  	if(id==36){
-  		id=4;
-  		alert("oops sorry");
-  		return id;
-  			
-
-  	}
-  	else
-  		if(id==9){
+     else
+     	if(id==36){
+  	  	id=4;
+  	  	alert("oops sorry");
+  	  	return id;
+  			}
+  	  else
+  		  if(id==9){
   			id=69;
   			alert("yeah");
   			return id;
-  			
-  		}
-  {
-  	return id;
-  }
+  			}
+  			else
+         {
+  	    return id;
+         }
 }
 function on() {
     document.getElementById("overlay").style.display = "block";
